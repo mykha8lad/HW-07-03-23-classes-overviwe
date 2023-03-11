@@ -15,9 +15,9 @@ namespace HW07_03_23_classes_overviwe
             setHomeNumber(homeNumber);
         }
 
-        public void setCity(string city){this.city = city;}
-        public void setStreet(string street){this.street = street;}
-        public void setHomeNumber(string homeNumber){this.homeNumber = homeNumber;}
+        public void setCity(string city) { this.city = city; }
+        public void setStreet(string street) { this.street = street; }
+        public void setHomeNumber(string homeNumber) { this.homeNumber = homeNumber; }
 
         public string getCity() { return this.city; }
         public string getStreet() { return this.street; }

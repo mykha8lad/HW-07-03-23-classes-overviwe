@@ -9,9 +9,13 @@ namespace HW07_03_23_classes_overviwe
         private string name;
         private string lastname;
         private string surname;
+        private string phoneNumber;
         DateTime birthday;
         Address address;
-        private string phoneNumber;
+
+        List<double> offsets = new List<double>();
+        List<double> hometasks = new List<double>();
+        List<double> exams = new List<double>();
 
         public Student(string name, string lastname, string surname, DateTime birthday, string phoneNumber, string city, string street, string homeNumber)
         {
@@ -21,6 +25,7 @@ namespace HW07_03_23_classes_overviwe
             setPhoneNumber(phoneNumber);
             setBirthday(birthday);
             setAddress(city, street, homeNumber);
+            fillingLists();
         }
 
         public Student(string name, string lastname, string surname, DateTime birthday, string phoneNumber) :
@@ -49,12 +54,35 @@ namespace HW07_03_23_classes_overviwe
         public DateTime getBirthday() { return this.birthday; }
         public Address getAddress() { return this.address; }
 
+        public void fillingLists()
+        {
+            for (int i = 0; i < 12; ++i)
+            {
+                offsets.Add(new Random().Next(1, 13));
+                hometasks.Add(new Random().Next(1, 13));
+                exams.Add(new Random().Next(1, 13));
+            }
+        }
+
+        public void getLists()
+        {
+            foreach (double item in offsets)
+                Console.Write($"{item} ");
+            Console.WriteLine();
+            foreach (double item in hometasks)
+                Console.Write($"{item} ");
+            Console.WriteLine();
+            foreach (double item in exams)
+                Console.Write($"{item} ");
+        }
+
         public override string ToString()
         {
             return ($"Student: {getName()} {getLastname()} {getSurname()}\n" +
                 $"Birthday: {getBirthday()}\n" +
                 $"Address\n{getAddress()}\n" +
-                $"Phone number: {getPhoneNumber()}");
+                $"Phone number: {getPhoneNumber()}\n" +
+                $"Rating\n");
         }
     }
 }
