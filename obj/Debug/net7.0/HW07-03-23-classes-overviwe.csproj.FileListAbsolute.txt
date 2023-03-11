@@ -1,0 +1,15 @@
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\bin\Debug\net7.0\HW07-03-23-classes-overviwe.exe
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\bin\Debug\net7.0\HW07-03-23-classes-overviwe.deps.json
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\bin\Debug\net7.0\HW07-03-23-classes-overviwe.runtimeconfig.json
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\bin\Debug\net7.0\HW07-03-23-classes-overviwe.dll
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\bin\Debug\net7.0\HW07-03-23-classes-overviwe.pdb
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.csproj.AssemblyReference.cache
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.AssemblyInfoInputs.cache
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.AssemblyInfo.cs
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.csproj.CoreCompileInputs.cache
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.dll
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\refint\HW07-03-23-classes-overviwe.dll
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.pdb
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\HW07-03-23-classes-overviwe.genruntimeconfig.cache
+D:\c#-projects\HW07-03-23-classes-overviwe\HW07-03-23-classes-overviwe\obj\Debug\net7.0\ref\HW07-03-23-classes-overviwe.dll

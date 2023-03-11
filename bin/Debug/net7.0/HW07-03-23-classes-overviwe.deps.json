@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "HW07-03-23-classes-overviwe/1.0.0": {
+        "runtime": {
+          "HW07-03-23-classes-overviwe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HW07-03-23-classes-overviwe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
