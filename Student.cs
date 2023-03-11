@@ -56,7 +56,7 @@ namespace HW07_03_23_classes_overviwe
 
         public void fillingLists()
         {
-            for (int i = 0; i < 12; ++i)
+            for (int i = 0; i < 7; ++i)
             {
                 offsets.Add(new Random().Next(1, 13));
                 hometasks.Add(new Random().Next(1, 13));
@@ -64,25 +64,20 @@ namespace HW07_03_23_classes_overviwe
             }
         }
 
-        public void getLists()
-        {
-            foreach (double item in offsets)
-                Console.Write($"{item} ");
-            Console.WriteLine();
-            foreach (double item in hometasks)
-                Console.Write($"{item} ");
-            Console.WriteLine();
-            foreach (double item in exams)
-                Console.Write($"{item} ");
-        }
+        public string getListOffsets() { return string.Join(" ", this.offsets); }
+        public string getListHometasks() { return string.Join(" ", this.hometasks); }
+        public string getListExams() { return string.Join(" ", this.exams); }
 
         public override string ToString()
         {
             return ($"Student: {getName()} {getLastname()} {getSurname()}\n" +
                 $"Birthday: {getBirthday()}\n" +
-                $"Address\n{getAddress()}\n" +
+                $"Address: {getAddress()}\n" +
                 $"Phone number: {getPhoneNumber()}\n" +
-                $"Rating\n");
+                $"Rating\n" +
+                $"Scores offsets - {getListOffsets()}\n" +
+                $"Scores hometasks - {getListHometasks()}\n" +
+                $"Scores exams - {getListExams()}\n");
         }
     }
 }

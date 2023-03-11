@@ -8,7 +8,6 @@ namespace HW07_03_23_classes_overviwe
         {
             Student student = new Student();
             Console.WriteLine(student);
-            student.getLists();
         }
     }
 }
