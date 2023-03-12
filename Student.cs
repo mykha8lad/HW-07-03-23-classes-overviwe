@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 namespace HW07_03_23_classes_overviwe
 {
     public class Student
     {
+        private int id;
         private string name;
         private string lastname;
         private string surname;
@@ -13,9 +15,9 @@ namespace HW07_03_23_classes_overviwe
         DateTime birthday;
         Address address;
 
-        List<double> offsets = new List<double>();
-        List<double> hometasks = new List<double>();
-        List<double> exams = new List<double>();
+        List<int> offsets = new List<int>();
+        List<int> hometasks = new List<int>();
+        List<int> exams = new List<int>();
 
         public Student(string name, string lastname, string surname, DateTime birthday, string phoneNumber, string city, string street, string homeNumber)
         {
@@ -26,6 +28,7 @@ namespace HW07_03_23_classes_overviwe
             setBirthday(birthday);
             setAddress(city, street, homeNumber);
             fillingLists();
+            id = new Random().Next(357943, 8357235);
         }
 
         public Student(string name, string lastname, string surname, DateTime birthday, string phoneNumber) :
@@ -33,20 +36,27 @@ namespace HW07_03_23_classes_overviwe
         { }
 
         public Student(string name, string lastname, string surname) :
-            this(name, lastname, surname, new DateTime(1, 1, 1), "+38**********", "None", "None", "None")
+            this(name, lastname, surname, new DateTime(1, 1, 1), "(000)000-0000", "None", "None", "None")
         { }
 
         public Student() :
-            this("None", "None", "None", new DateTime(1, 1, 1), "+38**********", "None", "None", "None")
+            this("None", "None", "None", new DateTime(1, 1, 1), "(000)000-0000", "None", "None", "None")
         { }
 
         public void setName(string name) { this.name = name; }
         public void setLastname(string lastname) { this.lastname = lastname; }
         public void setSurname(string surname) { this.surname = surname; }
-        public void setPhoneNumber(string phoneNumber) { this.phoneNumber = phoneNumber; }
+        public void setPhoneNumber(string phoneNumber) {
+            string phoneRegexp = @"^\(\d{3}\)\d{3}\-\d{4}$";
+            do
+            {
+                this.phoneNumber = phoneNumber;
+            } while (!Regex.IsMatch(phoneNumber, phoneRegexp));
+        }
         public void setBirthday(DateTime birthday) { this.birthday = birthday; }
         public void setAddress(string city, string street, string homeNumber) { this.address = new Address(city, street, homeNumber); }
 
+        public int getId() { return id; }
         public string getName() { return this.name; }
         public string getLastname() { return this.lastname; }
         public string getSurname() { return this.surname; }
@@ -64,20 +74,25 @@ namespace HW07_03_23_classes_overviwe
             }
         }
 
-        public string getListOffsets() { return string.Join(" ", this.offsets); }
-        public string getListHometasks() { return string.Join(" ", this.hometasks); }
-        public string getListExams() { return string.Join(" ", this.exams); }
+        public List<int> getListOffsets() { return offsets; }
+        public List<int> getListHometasks() { return hometasks; }
+        public List<int> getListExams() { return exams; }
+
+        public string getListOffsetsForToString() { return string.Join(" ", this.getListOffsets()); }
+        public string getListHometasksForToString() { return string.Join(" ", this.getListHometasks()); }
+        public string getListExamsForToString() { return string.Join(" ", this.getListExams()); }
 
         public override string ToString()
         {
-            return ($"Student: {getName()} {getLastname()} {getSurname()}\n" +
+            return ($"ID: {getId()}\n" +
+                $"Student: {getLastname()} {getName()} {getSurname()}\n" +
                 $"Birthday: {getBirthday()}\n" +
                 $"Address: {getAddress()}\n" +
                 $"Phone number: {getPhoneNumber()}\n" +
                 $"Rating\n" +
-                $"Scores offsets - {getListOffsets()}\n" +
-                $"Scores hometasks - {getListHometasks()}\n" +
-                $"Scores exams - {getListExams()}\n");
+                $"Scores offsets - {getListOffsetsForToString()}\n" +
+                $"Scores hometasks - {getListHometasksForToString()}\n" +
+                $"Scores exams - {getListExamsForToString()}\n");
         }
     }
 }

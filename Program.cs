@@ -1,6 +1,4 @@
-﻿
-
-namespace HW07_03_23_classes_overviwe
+﻿namespace HW07_03_23_classes_overviwe
 {
     internal class Program
     {

@@ -25,7 +25,7 @@ namespace HW07_03_23_classes_overviwe
 
         public override string ToString()
         {
-            return ($"{getCity()}, {getStreet()} st. {getHomeNumber()}");
+            return ($"{getCity()}, {getStreet()} {getHomeNumber()}");
         }
     }
 }
