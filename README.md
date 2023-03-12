@@ -13,6 +13,7 @@ namespace HW07_03_23_classes_overviwe
         private string street;
         private string homeNumber;
 
+        // main constructor
         public Address(string city, string street, string homeNumber)
         {
             setCity(city);
@@ -59,6 +60,7 @@ namespace HW07_03_23_classes_overviwe
         List<int> hometasks = new List<int>();
         List<int> exams = new List<int>();
 
+        // main constructor
         public Student(string name, string lastname, string surname, DateTime birthday, string phoneNumber, string city, string street, string homeNumber)
         {
             setName(name);
