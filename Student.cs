@@ -30,15 +30,12 @@ namespace HW07_03_23_classes_overviwe
             fillingLists();
             id = new Random().Next(357943, 8357235);
         }
-
         public Student(string name, string lastname, string surname, DateTime birthday, string phoneNumber) :
             this(name, lastname, surname, birthday, phoneNumber, "None", "None", "None")
         { }
-
         public Student(string name, string lastname, string surname) :
             this(name, lastname, surname, new DateTime(1, 1, 1), "(000)000-0000", "None", "None", "None")
         { }
-
         public Student() :
             this("None", "None", "None", new DateTime(1, 1, 1), "(000)000-0000", "None", "None", "None")
         { }
@@ -46,7 +43,8 @@ namespace HW07_03_23_classes_overviwe
         public void setName(string name) { this.name = name; }
         public void setLastname(string lastname) { this.lastname = lastname; }
         public void setSurname(string surname) { this.surname = surname; }
-        public void setPhoneNumber(string phoneNumber) {
+        public void setPhoneNumber(string phoneNumber)
+        {
             string phoneRegexp = @"^\(\d{3}\)\d{3}\-\d{4}$";
             do
             {
@@ -56,7 +54,7 @@ namespace HW07_03_23_classes_overviwe
         public void setBirthday(DateTime birthday) { this.birthday = birthday; }
         public void setAddress(string city, string street, string homeNumber) { this.address = new Address(city, street, homeNumber); }
 
-        public int getId() { return id; }
+        public int getId() { return this.id; }
         public string getName() { return this.name; }
         public string getLastname() { return this.lastname; }
         public string getSurname() { return this.surname; }
@@ -78,6 +76,7 @@ namespace HW07_03_23_classes_overviwe
         public List<int> getListHometasks() { return hometasks; }
         public List<int> getListExams() { return exams; }
 
+        // Конвертация типа List в String для дальнейшего взаимодействия в ToString()
         public string getListOffsetsForToString() { return string.Join(" ", this.getListOffsets()); }
         public string getListHometasksForToString() { return string.Join(" ", this.getListHometasks()); }
         public string getListExamsForToString() { return string.Join(" ", this.getListExams()); }
